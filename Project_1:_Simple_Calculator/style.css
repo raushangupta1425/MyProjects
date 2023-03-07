@@ -11,3 +11,43 @@ body{
     align-items: center;
     background-color: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
+.calculator{
+    border: 1px solid #717377;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: silver;
+    box-shadow: 0px 3px 15px rgba(113, 115,119, 0.5);
+    width: 30%;
+}
+input{
+    width: 100%;
+    padding: 25%;
+    border-radius: 3%;
+    border-color: #ffffff;
+    background-color: #9fbc9a;
+    text-align: right;
+    cursor: pointer;
+}
+input::placeholder{
+    color: #000000;
+    font-size: 30px;
+}
+button{
+    border: none;
+    width: 15%;
+    margin: 2%;
+    padding: 5%;
+    color: #000000;
+    background-color:darkgray;
+    font-size: larger;
+    text-align: center;
+    cursor: pointer;
+}
+.equalBtn{
+    background-color: #f56632;
+    width: 130px;
+}
+.operator{
+    color: #ff4500;
+    
+}
