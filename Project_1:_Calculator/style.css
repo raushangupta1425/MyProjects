@@ -12,9 +12,11 @@
     justify-items: center;
 }
 .calculator{
+    height: fit-content;
     background-color: #3a4452;
     padding: 0.5%;
     border-radius: 5px;
+    zoom: 150%;
 }
 .calculator form input{
     border: 0;
