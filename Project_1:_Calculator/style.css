@@ -44,6 +44,7 @@ form .display input{
     background-color: rgb(212, 255, 241);
     color: #000000;
     box-shadow: 5px 5px -18px;    
+    pointer-events: none;
 }
 form input.operator{
     color: aqua;
