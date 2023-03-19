@@ -9,7 +9,7 @@
     background-color: rgb(142, 252, 215);
     display: flex;
     justify-content: center;
-    justify-items: center;
+    align-items: center;
 }
 .calculator{
     height: fit-content;
