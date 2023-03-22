@@ -1,24 +1,34 @@
-let input = document.getElementsById('inputBox');
+
+let display = document.getElementById('inputBox'); 
 let buttons = document.querySelectorAll('button');
-let string = "";
-let arr = Array.from(buttons);
-arr.forEach(button => {
-    button.addEventListener('click', (e) =>{
-        if(e.target.innerHTML == '='){
-            string = eval(string);
-            input.value = string;
+let screen = " ";
+for(item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log(buttonText);
+        if(buttonText == 'ON') {
+            screen = "0";
+            display.value = screen;
         }
-        else if(e.target.innerHTML == 'AC'){
-            string = "";
-            input.value = string;
+        else if(buttonText == '*' ) {
+            screen += buttonText;
+            display.value = screen;
         }
-        else if(e.target.innerHTML == 'DEL'){
-            string = string.substring(0, string.length-1);
-            input.value = string;
+        else if(buttonText == 'AC') {
+            screen = "0";
+            display.value = screen;
+        }
+        else if(buttonText == 'DEL') {
+            screen = screen.substring(0, screen.length-1);
+            display.value = screen;
+        }
+        else if(buttonText == '=') {
+            screen = eval(screen);
+            display.value = screen;
         }
         else{
-            string += e.target.innerHTML;
-            input.value = string;
+            screen += e.target.innerText;
+            display.value = screen;
         }      
     })
-})
+}
