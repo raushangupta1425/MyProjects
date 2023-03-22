@@ -5,9 +5,12 @@ let screen = " ";
 for(item of buttons) {
     item.addEventListener('click', (e) => {
         buttonText = e.target.innerText;
-        console.log(buttonText);
         if(buttonText == 'ON') {
             screen = "0";
+            display.value = screen;
+        }
+        else if(buttonText == '(' ) {
+            screen += '*(';
             display.value = screen;
         }
         else if(buttonText == '*' ) {
