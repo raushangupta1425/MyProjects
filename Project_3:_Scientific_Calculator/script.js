@@ -8,16 +8,12 @@ for(item of buttons) {
             screen = "0";
             display.value = screen;
         }
-        else if(buttonText == '(' ) {
-            screen += '*(';
-            display.value = screen;
-        }
         else if(buttonText == '*' ) {
             screen += buttonText;
             display.value = screen;
         }
         else if(buttonText == 'AC') {
-            screen = "0";
+            screen = "";
             display.value = screen;
         }
         else if(buttonText == 'DEL') {
@@ -25,6 +21,7 @@ for(item of buttons) {
             display.value = screen;
         }
         else if(buttonText == '=') {
+            screen = screen.replace( '(', '*(' );
             screen = eval(screen);
             display.value = screen;
         }
