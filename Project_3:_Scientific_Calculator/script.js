@@ -4,10 +4,26 @@ let screen = " ";
 for(item of buttons) {
     item.addEventListener('click', (e) => {
         buttonText = e.target.innerText;
-        if(buttonText == 'ON') {
-            screen = "0";
+        if(buttonText == 'M+') {
+            screen = eval(screen);
             display.value = screen;
         }
+        else if(buttonText == 'x^2') {
+            screen = screen**2;
+            display.value = screen;
+        }
+        else if(buttonText == 'x^-1') {
+            screen = 1/screen;
+            display.value = screen;
+        }
+        else if(buttonText == 'x^x') {
+            screen += '^';
+            display.value = screen;
+        }
+        // else if(buttonText == 'Ans') {
+        //     screen = '';
+        //     display.value = 'Ans'+screen;
+        // }
         else if(buttonText == '*' ) {
             screen += buttonText;
             display.value = screen;
@@ -21,9 +37,13 @@ for(item of buttons) {
             display.value = screen;
         }
         else if(buttonText == '=') {
-            screen = screen.replace( '(', '*(' );
-            screen = eval(screen);
+            screen = screen.replace('(', '*(');
+            screen = screen.replace('x', '*');
+            screen = screen.replace('^', '**');
+            screen= eval(screen);
             display.value = screen;
+            // Ans = screen;
+            screen = '';
         }
         else{
             screen += e.target.innerText;

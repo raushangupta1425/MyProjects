@@ -17,11 +17,15 @@ body{
     border-radius: 10px;
     background-color: silver;
     box-shadow: 0px 3px 15px rgba(113, 115,119, 0.5);
-    width: 80%;
-    zoom: 110%;
+    width: 30%;
+    height: fit-content;
+    margin-left: 35%;
+    display: flex;
+    flex-direction: column;
+    zoom: 90%;
 }
-input{
-    width: 100%;
+textarea{
+    width: 600%;
     height: 150px;
     border-radius: 3px;
     font-size: 40px;
@@ -31,36 +35,37 @@ input{
     cursor: pointer;
     pointer-events: none;
     border: none;
-    text-align: right;
+    /* text-align: right; */
 }
-input::placeholder{
+textarea::placeholder{
     font-size: 40px;
 }
 span{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+}
+div{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
 }
 button{
-    height: 60px;
+    height: 45px;
     background-color:darkgray;
     text-align: center;
     cursor: pointer;
     color: #000000;
     margin: 5px;
     border: none;
+    border-radius: 10px 10px 15px 15px;
     font-size: large;
 }
 .equalBtn{
-    background-color: #f56632;
-    grid-column: span 2;
-    width: 145px;
+    background-color: #f88c65;
 }
 .plus{
     display: grid;
-    grid-row: span 2;
-    height: 130px;
     align-items: center;
 }
 .operator{
-    color: #ff4500;
+    color: #000000;
 }
