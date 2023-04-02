@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 229px;
+    background-color: #000000;
+    padding: 10px;
+    color:rgb(252, 13, 52);
+    font-size: 35px;
+    border-radius: 10px;
+    zoom: 400%;
+}
+.Time{
+    background-color: #000000;
+    color:rgb(252, 13, 52);
+    text-align: right;
+    width: 50px;
+    font-size: 50px;
+    border-radius: 10px;
+    border-color: rgb(252, 13, 52);
+    display: flex;
+}
+.Days{
+    font-size: 15px;
+    display: flex;
+}
+#ampm{
+    font-size: 15px;
+}
+#Dat{
+    width: 80%;
+}
