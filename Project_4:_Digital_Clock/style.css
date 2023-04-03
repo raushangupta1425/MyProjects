@@ -53,8 +53,8 @@ input{
 }
 .text{
     position: absolute;
-    left: 104px;
-    top: 44px; 
+    left: 86px;
+    top: 36px; 
     font-size: 8px;
     pointer-events: none;
 }
