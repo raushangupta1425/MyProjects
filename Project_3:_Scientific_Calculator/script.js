@@ -1,6 +1,8 @@
 let display = document.getElementById('inputBox'); 
 let buttons = document.querySelectorAll('button');
+// let oper = document.querySelectorAll('.operator');
 let screen = " ";
+let Ans = " ";
 for(item of buttons) {
     item.addEventListener('click', (e) => {
         buttonText = e.target.innerText;
@@ -8,21 +10,30 @@ for(item of buttons) {
             screen = eval(screen);
             display.value = screen;
         }
-        else if(buttonText == 'x^2') {
+        else if(buttonText == 'x 2') {
             screen = screen**2;
             display.value = screen;
         }
-        else if(buttonText == 'x^-1') {
+        else if(buttonText == '(-)') {
+            screen += screen.includes('(') ? "-" : "(-";
+            display.value = screen;
+        }
+        else if(buttonText == 'x -1') {
             screen = 1/screen;
             display.value = screen;
         }
-        else if(buttonText == 'x^x') {
+        else if(buttonText == 'x x') {
             screen += '^';
             display.value = screen;
         }
-        // else if(buttonText == 'Ans') {
-        //     screen = '';
-        //     display.value = 'Ans'+screen;
+        // else if(buttonText === '.' && screen.includes('.')) {
+        //     if(screen.includes(oper)){
+        //         screen += '.';
+        //         display.value = screen;
+        //     }
+        //     else{
+        //         return
+        //     }
         // }
         else if(buttonText == '*' ) {
             screen += buttonText;
@@ -37,13 +48,18 @@ for(item of buttons) {
             display.value = screen;
         }
         else if(buttonText == '=') {
+            if(screen == 'Ans'){
+                screen = Ans+screen.slice(2,length)
+                display.value = screen;
+            }else{
             screen = screen.replace('(', '*(');
             screen = screen.replace('x', '*');
             screen = screen.replace('^', '**');
             screen= eval(screen);
             display.value = screen;
-            // Ans = screen;
+            Ans = screen;
             screen = '';
+            }
         }
         else{
             screen += e.target.innerText;
