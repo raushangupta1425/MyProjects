@@ -15,12 +15,14 @@ body{
     position: relative;
     height: 500px;
     width: 500px;
-    background-color: #ffffff;
+    background-image: url(bcg.jpg);
+    background-size: 100%;
     border-radius: 50%;
     border: 20px solid #212121;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 7px 32px rgba(26, 20, 20, 0.959), inset 5px 7px 32px rgba(26, 20, 20, 0.959);
 }
 .clock span{
     position: absolute;
