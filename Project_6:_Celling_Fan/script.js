@@ -1,4 +1,4 @@
-speed= document.getElementsByClassName("fan");
+speed= document.getElementsByClassName("Rotar");
 function on(){
     speed[0].style.animationName="spin";
 }

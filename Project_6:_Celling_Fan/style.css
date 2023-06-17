@@ -12,11 +12,19 @@ body{
     align-items: center;
 }
 .fan{
-    width: 75%;
-    height: 95%;
+    width: 40%;
+    height: 75%;
     display: flex;
+    background-color: transparent;
     justify-content: center;
     align-items: center;
+}
+.Rotar{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(150, 40, 40);
+    border-radius: 50%;
     /* animation-name: spin; */
     animation-duration: 1s;  /*We can manage speed of fan from here by putting value between 0.1s (high speed) to 1s (low speed). */
     animation-iteration-count: infinite;
@@ -26,13 +34,6 @@ body{
     100%{
         transform: rotate(360deg);
     }
-}
-.Rotar{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(150, 40, 40);
-    border-radius: 50%;
 }
 .circle{
     width: 80px;
