@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fan{
+    width: 75%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation-name: spin; */
+    animation-duration: 1s;  /*We can manage speed of fan from here by putting value between 0.1s (high speed) to 1s (low speed). */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.Rotar{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(150, 40, 40);
+    border-radius: 50%;
+}
+.circle{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.wings{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(150, 40, 40);
+    border-radius: 20px 10px 10px 20px;
+}
+.connector{
+    width: 50%;
+    height: 20px;
+    background-color: rgb(150, 40, 40);
+}
+#blade1{
+    position: absolute;
+    transform: rotate(120deg);
+    right: -11px;
+    top: -20px;
+}
+#blade2{
+    transform: rotate(0deg);
+    position: absolute;
+    left: -45px;
+    top: 40px;
+}
+#blade3{
+    transform: rotate(240deg);
+    position: absolute;
+    right: -10px;
+    top: 98px;
+}
+#blade4{
+    position: absolute;
+    transform: rotate(120deg);
+    right: -130px;
+    top: -110px;
+}
+#blade5{
+    transform: rotate(0deg);
+    position: absolute;
+    left: -206px;
+    top: 25px;
+}
+#blade6{
+    transform: rotate(240deg);
+    position: absolute;
+    right: -130px;
+    top: 160px;
+}
+.rect{
+    width: 190px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px 10px 10px 20px;
+    margin: 5px auto;
+}
+.controls{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #ffffff;
+    margin: 10px;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: inset 2px 2px 5px #868080, inset -2px -2px 5px #868080;
+}
+button{
+    width: 80px;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+button:first-child{
+    background-color: rgb(79, 231, 79);
+    border: 1px solid #6e5f5f;
+}
+button:nth-child(2){
+    background-color: rgb(233, 60, 60);
+    border: 1px solid #6e5f5f;
+}
